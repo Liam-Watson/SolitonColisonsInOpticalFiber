@@ -1,0 +1,61 @@
+\documentclass{article}
+\DeclareMathSizes{10}{10}{7}{7}
+\usepackage{amsmath}
+\usepackage{ amssymb }
+\usepackage{tikz, graphicx}
+\usepackage{geometry}
+\usepackage[makeroom]{cancel}
+\DeclareMathOperator{\sech}{sech}
+% http://www.mathworks.com/matlabcentral/fileexchange/8015-m-code-latex-package
+\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    }
+\usepackage{float}
+\restylefloat{table}
+
+\geometry{legalpaper, margin=0.7in}
+\title{3AN Project 2\\ What happened when two waves crossed the road}
+\author{Liam Watson WTSLIA001}
+\begin{document}
+\maketitle
+\section{Introduction and physics}
+We wish to better understand the interaction between colliding solitons within some optical communication media such as firbre obtic cable used for audio or network communications. 
+We can model optical pulses in a media with saturation nonlinearity properties using the following modified nonlinear  Schr¨odinger equation:
+\begin{align}
+i\psi_t + \psi_{xx} + \frac{2|\psi|^2\psi}{1+S\sin(|\psi|^2)} = 0
+\end{align}
+Note that we impose periodic boundary conditions to the Schr¨odinger equation. \\
+We can study the collisions of N solitons by choosing our initial configuration as the sum of N solitons separated by a sufficiently large distance as follows:
+\begin{align}
+\psi (x,0) = \sum_{j=1}^N A_j \sech(A_j (x-x_j))e^{iv_j(x-x_j)}
+\end{align}
+In the following sections we will study the soliton collisoons for different values of the nonlinearity saturation $S\in(-1,1)$, the velocity $v$ the intersoliton distance $|x_k-x_j|$. \\
+This analysis will be done using two different numerical methods, namely the split-step and finite difference methods. To ensure that any insight gained from either method is consistent we will ensure that the following conserved quantity remains within a maximum deviation of $\varepsilon = 10^-5$.
+\begin{align}
+N = \int_{-\infty}^\infty |\psi|^2 dx
+\end{align}
+Additionally we will compare the execution time of both numberical methods for the given $\varepsilon$
+\section{Derivation of needed numerical method formula}
+DERV
+\subsection{Split-Step}
+SPLIT Step DERV
+\subsection{Finite Difference}
+FD derivation
+\section{Implementation}
+IMPL
+\section{Split-Step}
+Splitstep IMPL
+\subsection{Finite Difference}
+FD IMPL
+\section{Results and Discussion}
+RESULTS
+\section{Conclusion}
+CONCLUSION
+
+
+\end{document}
